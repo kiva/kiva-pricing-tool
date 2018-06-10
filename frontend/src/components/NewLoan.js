@@ -37,14 +37,12 @@ class NewLoan extends Component {
     const { changedFormData } = this.props
     changedFormData('back', 'newloan')
     changedFormData('error', false)
-    axios.get(Variables.flaskURL + 'getAllMFI').then(response => {
+
+    axios.get(Variables.flaskURL + 'partnerThemeLists').then(response => {
+      console.log(response.data.result)
       this.setState({
-        partner_names: response.data.result.partners
-      })
-    })
-    axios.get(Variables.flaskURL + 'getAllLT').then(response => {
-      this.setState({
-        loan_themes: response.data.result.loan_theme
+        partner_names: response.data.result.partners.sort(),
+        loan_themes: response.data.result.themes.sort()
       })
     })
   }

@@ -372,7 +372,7 @@ class APRInputs extends Component {
                   id="Nominal Interest Rate*"
                   reduxId="nominalInterestRate"
                   hint="ex. 12"
-                  typeVal="int"
+                  typeVal="float"
                   limit="100"
                   requiredField={true}
                   // textBody={formDataReducer.nominalInterestRate}
