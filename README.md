@@ -1,8 +1,8 @@
 # Kiva Pricing Tool
 An open source web application that calculates an APR Nominal rate for a loan with different attributes, then displays the Repayment Schedule and Loan Payment Visualization.
 
-[How to Setup App Locally](https://github.com/hack4impact-uiuc/kiva-pricing-tool/blob/master/docs/setup.md) <br>
-[Integrating App With Heroku](https://github.com/hack4impact-uiuc/kiva-pricing-tool/blob/master/docs/heroku.md)
+[How to Setup App Locally](/docs/setup.md) <br>
+[Integrating App With Heroku](/docs/heroku.md)
 
 ## Product Resources
 * [Product Requirements Document](https://docs.google.com/document/d/1Rw6Q8YMIpvYFXR3eStdTVT4iZXMpR7En3_yg677VgjE/edit?usp=sharing)
@@ -12,13 +12,13 @@ An open source web application that calculates an APR Nominal rate for a loan wi
 * [Figma for Mockups](https://www.figma.com/file/0jmf44vrazZ8C2vkTCwnroMF/Kiva)
 
 ## Backend Resources
-* [Database Schema](https://github.com/hack4impact-uiuc/kiva-pricing-tool/tree/master/docs/api_docs.md)
+* [Database Schema](/docs/api_docs.md)
 * [Repo with XIRR function that we used for our calculations](https://github.com/peliot/XIRR-and-XNPV)
 
 ## Excel Tool Calculation Differences
 Our calculator functions differently, and more accurately, than the original excel tool that we based our implementation off of.
 
-You can download the original APR tool we based our calculator off of [here](/docs/APR_Excel_Tool.xlsm). The functionality our tool replicates is all under the "Pricing - Advanced" and "Rep Schedule - Advanced" sheets. We use the exact same inputs, but a few of our calculations are different. They are as following. 
+You can download the original APR tool we based our calculator off of [here](/docs/APR_Excel_Tool.xlsm). The functionality our tool replicates is all under the "Pricing - Advanced" and "Rep Schedule - Advanced" sheets. We use the exact same inputs, but a few of our calculations are different. They are as following.
 
 * Repayment Schedule Editing
     * On the excel sheet, a user must enter manual mode and make changes on parallel columns
@@ -31,15 +31,15 @@ You can download the original APR tool we based our calculator off of [here](/do
 * Security Deposit Interest Paid
     * On the excel sheet, if a balloon payment exists, the security deposit continues to accumulate interest, even though the loan has been paid off
     * Our calculations prevent interest from accumulating on the security deposit once the entire loan has been paid off
-   
+
 * Security Deposit Override
     * On the excel sheet, overriding the security deposit overrides both the security deposit and interest paid for that period
     * Our calculations will only override the security deposit column, and not affect the interest paid column
-   
+
 * Security Deposit Withdrawals
     * On the excel sheet, security deposit withdrawals are allocated to the last cashflow, even if a balloon payment occurs
     * Our calculations will lump the security deposit withdrawal with the final payment if a balloon payment occurs
-   
+
 * Cash Flows
     * On the excel sheet, there are cashflow indicators after each expense (interest, fees, taxes, security deposit)
     * Our implementation instead displays the overall final cash flows in each period once
@@ -61,16 +61,16 @@ Over the course of the 3 months we had to build out this tool, we accumulated so
 * Input Page
     * If any of the inputs are not valid, you will not be able to progress onto the output page. You are still able to click "Next", but nothing would happen. Should grey out buttons and not allow any clicking.
     * In order to align the textfields in the Input Page, we created hidden textfields to better realign/format the page
-    
+
 * Loan Repayment Visualization
     * In order to load the chart, a user has to hit "Generate Chart"
     * We put the button there because the data need to populate the chart doesn't load instantly when we render the page, so no chart data would be displayed otherwise
-    
+
 * User Information - Name
     * This is placed in the input form page
     * A better UX would be to place that at the beginning of both the New Loan and the Find Loan sequences, so that the backend can more easily differentiate an initial user and a user who is updating the loan. The UX would also be more straightforward.
 
-* URL's 
+* URL's
     * All our URL's are accessible, even if no prior data has been entered
     * Refreshing the page empties whatever is currently in our redux store, leaving some pages useless if refreshed
     * Some sort of validation/error page would be good
