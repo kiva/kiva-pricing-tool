@@ -2,7 +2,7 @@
 Clone the kiva-pricing-tool repository onto your computer.
 
 ## Frontend
-If you don't node-gyp installed globally, do so now
+If you don't have node-gyp installed globally, do so now
 ```
 npm install -g node-gyp
 ```
