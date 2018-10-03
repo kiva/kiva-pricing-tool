@@ -2,11 +2,15 @@
 Clone the kiva-pricing-tool repository onto your computer.
 
 ## Frontend
+If you don't have node-gyp installed globally, do so now
+```
+npm install -g node-gyp
+```
 In your terminal, cd into the frontend folder and type in
 ```
  npm install
-``` 
-To run your program, type in 
+```
+To run your program, type in
 ```
 npm start
 ```
@@ -79,4 +83,4 @@ To deactivate when you're using it:
 ```
 If you are using pip, your command line will have `(venv)$` in front instead of the `(flask......) bash-3.2$` Now look above for instructions to run the server.
 
-The API should be at http://127.0.0.1:3453/ 
+The API should be at http://127.0.0.1:3453/
