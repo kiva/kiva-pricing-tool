@@ -7,7 +7,7 @@
     "@vx/mock-data": "0.0.153",
     "@vx/scale": "0.0.153",
     "@vx/shape": "0.0.158",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "bootstrap": "^3.3.7",
     "flow-bin": "^0.66.0",
     "history": "^4.7.2",
